@@ -7,7 +7,7 @@ def user_turn():
 
     user_choice = int(user_choice)
     board[user_choice] = 'X'
-    printBoard()
+
 
 def printBoard():
 
@@ -15,5 +15,16 @@ def printBoard():
     print(f"{board[4]} | {board[5]} | {board[6]}")
     print(f"{board[7]} | {board[8]} | {board[9]}")
 
-printBoard()
-user_turn()
+def comp_turn():
+    comp_choice = random.choice(range(1, 10))
+    if board[comp_choice] != 'X':
+        board[comp_choice] = 'O'
+    else:
+        comp_choice = random.choice(range(1, 10))
+
+game_on = True
+
+while game_on:
+    printBoard()
+    user_turn()
+    comp_turn()
