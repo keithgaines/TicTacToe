@@ -1,13 +1,15 @@
 import random
 
-board = {num:'_' for num in range(1, 10)}
-
 def user_turn():
     user_choice = input("Moving from top left to bottom right, spaces are numbered 1 - 9. Please enter the space you'd like to mark for your turn.\n")
 
     user_choice = int(user_choice)
     board[user_choice] = 'X'
 
+def play_game():
+    printBoard()
+    user_turn()
+    comp_turn()
 
 def printBoard():
 
@@ -22,9 +24,13 @@ def comp_turn():
     else:
         comp_choice = random.choice(range(1, 10))
 
+
+board = {num:'_' for num in range(1, 10)}
+
 game_on = True
 
 while game_on:
-    printBoard()
-    user_turn()
-    comp_turn()
+    play_game()
+    
+
+    
