@@ -66,3 +66,7 @@ class check_win:
         elif global_info.board[3] == 'O' and global_info.board[6] == 'O' and global_info.board[9] == 'O':
             print("You lose")
             global_info.gameOn = False
+
+        if not global_info.openSpaces:
+            print("It's a draw")
+            global_info.gameOn = False
