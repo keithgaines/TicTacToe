@@ -1,30 +1,27 @@
+from ast import Global
 import random
-from globals import global_info
+from globals import GlobalInfo
+import check_win
 
-class turn():
+def playgame():
+    turn = 'X'
+    count = 0
 
-    def user():
-        user_choice = input("\nPlease enter your spot choice: ")
-
-        user_choice = int(user_choice)
-        global_info.board[user_choice] = 'X'
-        global_info.openSpaces.remove(user_choice)
-
+    while GlobalInfo.gameOn:
+        space = input("Please select a space: ")
+        space = int(space)
+        GlobalInfo.board[space] = turn
         try:
-            global_info.openSpaces.remove(user_choice)
+            GlobalInfo.openSpaces.remove(space)
         except ValueError:
-            print("You have selected an invalid space. Please try again. ")
+            print("You have selected an invalid space. Please try again. ")    
+        GlobalInfo.printboard()
+        if turn == 'X':
+            turn = 'O'
+            count += 1
 
-    def comp():
-        comp_choice = random.choice(global_info.openSpaces)
-        comp_choice = int(comp_choice)
-        if global_info.board[comp_choice] == 'X':
-            comp_choice = random.choice(global_info.openSpaces)
-            global_info.board[comp_choice] = 'O'    
         else:
-            global_info.board[comp_choice] = 'O'   
+            turn = 'X'
+
+        check_win.is_game_over()
         
-        try:
-            global_info.openSpaces.remove(comp_choice)
-        except ValueError:
-            comp_choice = random.choice(global_info.openSpaces)
