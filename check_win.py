@@ -1,72 +1,72 @@
-from globals import global_info
+from globals import GlobalInfo
 
-class check_win:
-    def isGameOver():
 
-        if global_info.board[1] == 'X' and global_info.board[2] == 'X' and global_info.board[3] == 'X':
-            print("You win!")
-            global_info.gameOn = False
+def is_game_over():
+    if GlobalInfo.board[1] == 'X' and GlobalInfo.board[2] == 'X' and GlobalInfo.board[3] == 'X':
+        print("You win!")
+        GlobalInfo.gameOn = False
 
-        elif global_info.board[4] == 'X' and global_info.board[5] == 'X' and global_info.board[6] == 'X':
-            print("You win!")
-            global_info.gameOn = False
+    elif GlobalInfo.board[4] == 'X' and GlobalInfo.board[5] == 'X' and GlobalInfo.board[6] == 'X':
+        print("You win!")
+        GlobalInfo.gameOn = False
 
-        elif global_info.board[7] == 'X' and global_info.board[8] == 'X' and global_info.board[9] == 'X':
-            print("You win!")
-            global_info.gameOn = False
+    elif GlobalInfo.board[7] == 'X' and GlobalInfo.board[8] == 'X' and GlobalInfo.board[9] == 'X':
+        print("You win!")
+        GlobalInfo.gameOn = False
 
-        elif global_info.board[1] == 'X' and global_info.board[4] == 'X' and global_info.board[7] == 'X':
-            print("You win!")
-            global_info.gameOn = False
+    elif GlobalInfo.board[1] == 'X' and GlobalInfo.board[4] == 'X' and GlobalInfo.board[7] == 'X':
+        print("You win!")
+        GlobalInfo.gameOn = False
 
-        elif global_info.board[2] == 'X' and global_info.board[5] == 'X' and global_info.board[8] == 'X':
-            print("You win!")
-            global_info.gameOn = False
+    elif GlobalInfo.board[2] == 'X' and GlobalInfo.board[5] == 'X' and GlobalInfo.board[8] == 'X':
+        print("You win!")
+        GlobalInfo.gameOn = False
 
-        elif global_info.board[3] == 'X' and global_info.board[6] == 'X' and global_info.board[9] == 'X':
-            print("You win!")
-            global_info.gameOn = False
+    elif GlobalInfo.board[3] == 'X' and GlobalInfo.board[6] == 'X' and GlobalInfo.board[9] == 'X':
+        print("You win!")
+        GlobalInfo.gameOn = False
 
-        elif global_info.board[1] == 'X' and global_info.board[5] == 'X' and global_info.board[9] == 'X':
-            print("You win!")
-            global_info.gameOn = False
+    elif GlobalInfo.board[1] == 'X' and GlobalInfo.board[5] == 'X' and GlobalInfo.board[9] == 'X':
+        print("You win!")
+        GlobalInfo.gameOn = False
 
-        if global_info.board[3] == 'X' and global_info.board[5] == 'X' and global_info.board[7] == 'X':
-            print("You win!")
-            global_info.gameOn = False
+    if GlobalInfo.board[3] == 'X' and GlobalInfo.board[5] == 'X' and GlobalInfo.board[7] == 'X':
+        print("You win!")
+        GlobalInfo.gameOn = False
 
-        if global_info.board[1] == 'O' and global_info.board[2] == 'O' and global_info.board[3] == 'O':
-            print("You lose")
-            global_info.gameOn = False
+    if GlobalInfo.board[1] == 'O' and GlobalInfo.board[2] == 'O' and GlobalInfo.board[3] == 'O':
+        print("You lose")
+        GlobalInfo.gameOn = False
 
-        elif global_info.board[4] == 'O' and global_info.board[5] == 'O' and global_info.board[6] == 'O':
-            print("You lose")
-            global_info.gameOn = False
+    elif GlobalInfo.board[4] == 'O' and GlobalInfo.board[5] == 'O' and GlobalInfo.board[6] == 'O':
+        print("You lose")
+        GlobalInfo.gameOn = False
 
-        elif global_info.board[7] == 'O' and global_info.board[8] == 'O' and global_info.board[9] == 'O':
-            print("You lose")
-            global_info.gameOn = False
+    elif GlobalInfo.board[7] == 'O' and GlobalInfo.board[8] == 'O' and GlobalInfo.board[9] == 'O':
+        print("You lose")
+        GlobalInfo.gameOn = False
 
-        elif global_info.board[1] == 'O' and global_info.board[5] == 'O' and global_info.board[9] == 'O':
-            print("You lose")
-            global_info.gameOn = False
+    elif GlobalInfo.board[1] == 'O' and GlobalInfo.board[5] == 'O' and GlobalInfo.board[9] == 'O':
+        print("You lose")
+        GlobalInfo.gameOn = False
 
-        elif global_info.board[3] == 'O' and global_info.board[5] == 'O' and global_info.board[7] == 'O':
-            print("You lose")
-            global_info.gameOn = False
+    elif GlobalInfo.board[3] == 'O' and GlobalInfo.board[5] == 'O' and GlobalInfo.board[7] == 'O':
+        print("You lose")
+        GlobalInfo.gameOn = False
 
-        elif global_info.board[1] == 'O' and global_info.board[4] == 'O' and global_info.board[7] == 'O':
-            print("You lose")
-            global_info.gameOn = False
+    elif GlobalInfo.board[1] == 'O' and GlobalInfo.board[4] == 'O' and GlobalInfo.board[7] == 'O':
+        print("You lose")
+        GlobalInfo.gameOn = False
 
-        elif global_info.board[2] == 'O' and global_info.board[5] == 'O' and global_info.board[8] == 'O':
-            print("You lose")
-            global_info.gameOn = False
+    elif GlobalInfo.board[2] == 'O' and GlobalInfo.board[5] == 'O' and GlobalInfo.board[8] == 'O':
+        print("You lose")
+        GlobalInfo.gameOn = False
 
-        elif global_info.board[3] == 'O' and global_info.board[6] == 'O' and global_info.board[9] == 'O':
-            print("You lose")
-            global_info.gameOn = False
+    elif GlobalInfo.board[3] == 'O' and GlobalInfo.board[6] == 'O' and GlobalInfo.board[9] == 'O':
+        print("You lose")
+        GlobalInfo.gameOn = False
 
-        if not global_info.openSpaces:
+    if not GlobalInfo.gameOn:
+        if len(GlobalInfo.openSpaces) == 0:
             print("It's a draw")
-            global_info.gameOn = False
+            GlobalInfo.gameOn = False
